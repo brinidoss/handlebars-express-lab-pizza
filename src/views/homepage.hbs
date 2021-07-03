@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/styles.css">
+<h1>You Are Clear to Enter.  Welcome to Pizza Planet!</h1>
+
+<h3>Specialty Pizzas</h3>
+<nav>
+    <ul>
+        {{#each pizzas}}
+        <li>
+            <a href="/specialty-pizzas?id={{this.id}}">{{this.name}}</a>
+        </li>
+        {{/each}}
+    </ul>
+</nav>
+
+<h3>Custom Pizza</h3>
+<a href="/build-your-own">Build your own!</a>
+
+<h3>Leave a Review</h3>
+<a href="/review">Click here to leave a review.</a>
+
+<img src="/pizza-image.jpg">
