@@ -58,11 +58,16 @@ routes.get("/build-your-own", (req, res) => {
 
 routes.post('/build-your-own/confirmation', (req, res) => {
     const size: string = req.body.size ? String(req.body.size) : '';
-    let chosenToppings: string[] = req.body.toppings;
+    let chosenToppings: string[] | string = req.body.toppings;
     let glutenFree: boolean | string = req.body['gluten-free'] === 'true' ? true : false;
     const specialInstructions: string = req.body['special-instructions'] ? String(req.body['special-instructions']) : '';
-    //const total: number = 0;
     
+    //this is when you choose just one ingredient - it takes the string and puts it into an array
+    if (typeof chosenToppings === 'string') {
+        chosenToppings = [chosenToppings];
+    }
+
+    //changes true and false to yes and no
     if (glutenFree) {
         glutenFree = "Yes";
     } else {
@@ -94,15 +99,22 @@ routes.post('/build-your-own/confirmation', (req, res) => {
         }
         return total;
     }
-    console.log(calcTotal());
-    //console.log(chosenToppings.length);
+   
+    function getFreeDelivery(): string {
+        if (calcTotal() >= 15) {
+            return "Because your order meets the $15.00 minimum, you get FREE DELIVERY!";
+        } else {
+            return "";
+        }
+    }
 
     interface BuiltPizza {
         size: string;
         toppings: string[];
-        glutenFree: boolean | string;
+        glutenFree: string;
         specialInstructions: string;
         price: number;
+        freeDelivery: string;
     }
 
     const newBuiltPizza: BuiltPizza = {
@@ -110,11 +122,14 @@ routes.post('/build-your-own/confirmation', (req, res) => {
         toppings: chosenToppings,
         glutenFree: glutenFree,
         specialInstructions: specialInstructions,
-        price: calcTotal()
+        price: calcTotal(),
+        freeDelivery: getFreeDelivery()
     }
 
     res.render('build-submission', {pizza: newBuiltPizza});
 })
+
+console.log(123/100);
 
 export default routes;
 
