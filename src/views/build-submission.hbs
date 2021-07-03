@@ -1,11 +1,12 @@
 <h3>Your Pizza</h3>
 <div>
 <p>Size:  {{pizza.size}}</p>
-<p>Toppings: 
+<p>Toppings: </p>
+    <ul>
     {{#each pizza.toppings}}
-    {{pizza.toppings.id}}
+    <li>{{this}}</li>
     {{/each}}
-</p>
+    </ul>
 <p>Gluten-free Crust:  {{pizza.glutenFree}}</p>
 <p>Specialty Instructions:  {{pizza.specialInstructions}}</p>
 <p>Price: ${{pizza.price}}</p>
