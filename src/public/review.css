@@ -1,0 +1,58 @@
+body {
+    background-color: black;
+}
+
+h2 {
+    font-family: Tourney;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 100px;
+}
+
+.form-container {
+    font-family: Orbitron;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 600px;
+    height: 300px;
+}
+
+.comment-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: gray;
+}

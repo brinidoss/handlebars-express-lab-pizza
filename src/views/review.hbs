@@ -1,22 +1,59 @@
+<head>
+<link rel="stylesheet" href="/review.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tourney&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Tourney&display=swap" rel="stylesheet">
+</head>
+
+<body>
 <h2>Leave a Review</h2>
 
-<form method="POST" action="/review/confirmation" id="review-form">
-<label for="name">Your Name</label>
-<input type="text" name="name" id="name" placeholder="Grant Chirpus">
-<label for="comment">Comment</label>
-<textarea rows="4" cols="50" name="comment" form="review-form"></textarea>
-<p>Rating</p>
-<label for="five">5 (best)</label>
-<input type="radio" name="rating" id="five" value="5">
-<label for="four">4</label>
-<input type="radio" name="rating" id="four" value="4">
-<label for="three">3</label>
-<input type="radio" name="rating" id="three" value="3">
-<label for="two">2</label>
-<input type="radio" name="rating" id="two" value="2">
-<label for="one">1 (worst)</label>
-<input type="radio" name="rating" id="one" value="1">
-<button type="submit">Submit</button>
+<div class="form-container">
+    <form method="POST" action="/review/confirmation" id="review-form">
+    <div class="name-container">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name" placeholder="Grant Chirpus">
+    </div>
+    <div class="comment-container">
+        <label for="comment">Comment</label>
+        <textarea rows="4" cols="50" name="comment" form="review-form"></textarea>
+    </div>
+    <div class="rating">
+        <p>Rating</p>
+        <section class="rating-container">
+            <div id="five-container">
+                <input type="radio" name="rating" id="five" value="5">
+                <label for="five">5 (best)</label>
+            </div>
+            <div id="four-container">
+                <input type="radio" name="rating" id="four" value="4">
+                <label for="four">4</label>
+            </div>
+            <div id="three-container">
+                <input type="radio" name="rating" id="three" value="3">
+                <label for="three">3</label>
+            </div>
+            <div id="two-container">
+                <input type="radio" name="rating" id="two" value="2">
+                <label for="two">2</label>
+            </div>
+            <div id="one-container">
+                <input type="radio" name="rating" id="one" value="1">
+                <label for="one">1 (worst)</label>
+            </div>
+        </section>
+    </div>
+    <div class="button-container">
+        <button type="submit">Submit</button>
+    </div>
+    <div class="link-container">
+      <a href="/">Never Mind</a>  
+    </div>
 </form>
+</div>
 
-<a href="/">Never Mind</a>
+
+</body>

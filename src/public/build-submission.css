@@ -1,0 +1,38 @@
+h3 {
+    font-family: Tourney;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 100px;
+}
+
+body {
+    background-color: black;
+}
+
+.content {
+    background-color: white;
+    font-family: Orbitron;
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    min-height: 500px;
+    max-height: fit-content;
+    padding: 20px;
+}
+
+#message {
+    color: purple;
+}
+
+a {
+    color: gray;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+}
+
+h3 {
+    font-family: Tourney;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 100px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.confirmation-container {
+    background-color: white;
+    font-family: Orbitron;
+    width: 450px;
+    height: 275px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: gray;
+}

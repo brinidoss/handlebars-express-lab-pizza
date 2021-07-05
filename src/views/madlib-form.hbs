@@ -1,0 +1,80 @@
+<head>
+<link rel="stylesheet" href="/madlib.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tourney&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Tourney&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<h3>Enter Some Random Words for Your Madlib Story</h3>
+<div class="form">
+<form method="POST" action="/madlib/result" id="madlib-form">
+    <div class="input-container">
+        <label for="character1">Name of Character 1</label>
+        <input type="text" name="character1" id="character1">
+    </div>
+    <div class="input-container">
+        <label for="character2">Name of Character 2</label>
+        <input type="text" name="character2" id="character2">
+    </div>
+    <div class="input-container">
+        <label for="noun1">Noun</label>
+        <input type="text" name="noun1" id="noun1">
+    </div>
+    <div class="input-container">
+        <label for="place">Place</label>
+        <input type="text" name="place" id="place">
+    </div>
+    <div class="input-container">
+        <label for="transport">Mode of Transportation</label>
+        <input type="text" name="transport" id="transport">
+    </div>
+    <div class="input-container">
+        <label for="noun2">Noun</label>
+        <input type="text" name="noun2" id="noun2">
+    </div>
+    <div class="input-container">
+        <label for="adjective1">Adjective</label>
+        <input type="text" name="adjective1" id="adjective1">
+    </div>
+    <div class="input-container">
+        <label for="creature">Noun</label>
+        <input type="text" name="creature" id="creature">
+    </div>
+    <div class="input-container">
+        <label for="verb">Verb (Unconjugated)</label>
+        <input type="text" name="verb" id="verb">
+    </div>
+    <div class="input-container">
+        <label for="adjective2">Adjective</label>
+        <input type="text" name="adjective2" id="adjective2">
+    </div>
+    <div class="input-container">
+        <label for="noun3">Noun</label>
+        <input type="text" name="noun3" id="noun3">
+    </div>
+    <div class="input-container">
+        <label for="adjective3">Adjective</label>
+        <input type="text" name="adjective3" id="adjective3">
+    </div>
+    <div class="input-container">
+        <label for="noun4">Noun</label>
+        <input type="text" name="noun4" id="noun4">
+    </div>
+    <div class="input-container">
+        <label for="sentence">Write a Random Sentence/Phrase.</label>
+        <textarea rows="4" cols="50" name="sentence" form="madlib-form"></textarea>
+    </div>
+    <div class="button-container">
+        <button type="submit">Submit</button>
+    </div>
+    <div class="link-container">
+        <a href="/">Go Back</a>
+    </div>
+</form>
+</div>
+
+</body>

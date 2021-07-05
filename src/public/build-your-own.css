@@ -1,0 +1,53 @@
+h3 {
+    font-family: Tourney;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 100px;
+}
+
+body {
+    background-color: black;
+}
+
+.content {
+    background-color: white;
+    font-family: Orbitron;
+    width: fit-content;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 500px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.toppings-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -50px;
+}
+
+.special-instructions {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: gray;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+}

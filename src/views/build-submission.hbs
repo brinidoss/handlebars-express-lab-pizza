@@ -1,17 +1,34 @@
+<head>
+<link rel="stylesheet" href="/build-submission.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tourney&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Tourney&display=swap" rel="stylesheet">
+</head>
+
+<body>
 <h3>Your Pizza</h3>
-<div>
-<p>Size:  {{pizza.size}}</p>
-<p>Toppings: </p>
-    <ul>
-    {{#each pizza.toppings}}
-    <li>{{this}}</li>
-    {{/each}}
-    </ul>
-<p>Gluten-free Crust:  {{pizza.glutenFree}}</p>
-<p>Specialty Instructions:  {{pizza.specialInstructions}}</p>
-<p>Price: ${{pizza.price}}</p>
-<p>{{pizza.freeDelivery}}</p>
+
+<div class="content">
+    <p>Size:  {{pizza.size}}</p>
+    <div class="toppings-container">
+        <p>Toppings: </p>
+            <ul>
+                {{#each pizza.toppings}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+    </div> 
+    <p>Gluten-free Crust:  {{pizza.glutenFree}}</p>
+    <p>Specialty Instructions:  {{pizza.specialInstructions}}</p>
+    <p>Price: ${{pizza.price}}</p>
+    <p id="message">{{pizza.freeDelivery}}</p>
+    <div class="links-container">
+        <a href="/build-your-own">Build Another Pizza</a>
+        <a href="/">Back to Homepage</a>
+    </div>
 </div>
 
-<a href="/build-your-own">Build Another Pizza</a>
-<a href="/">Back to Homepage</a>
+</body>

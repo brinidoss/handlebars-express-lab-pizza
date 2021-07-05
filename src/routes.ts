@@ -62,10 +62,17 @@ routes.post('/build-your-own/confirmation', (req, res) => {
     let glutenFree: boolean | string = req.body['gluten-free'] === 'true' ? true : false;
     const specialInstructions: string = req.body['special-instructions'] ? String(req.body['special-instructions']) : '';
     
+    console.log(chosenToppings);
+
     //this is when you choose just one ingredient - it takes the string and puts it into an array
+    //also if you have 0 ingredients, turns it from undefined to empty array
     if (typeof chosenToppings === 'string') {
         chosenToppings = [chosenToppings];
+    } else if (typeof chosenToppings === 'undefined') {
+        chosenToppings = [];
     }
+
+    console.log(chosenToppings);
 
     //changes true and false to yes and no
     if (glutenFree) {
@@ -141,6 +148,65 @@ routes.post('/build-your-own/confirmation', (req, res) => {
 
     res.render('build-submission', {pizza: newBuiltPizza});
 })
+
+routes.get("/madlib", (req, res) => {
+    res.render('madlib-form');
+})
+
+routes.post('/madlib/result', (req, res) => {
+    const character1: string = req.body.character1 ? String(req.body.character1) : '';
+    const character2: string = req.body.character2 ? String(req.body.character2) : '';
+    const noun1: string = req.body.noun1 ? String(req.body.noun1) : '';
+    const noun2: string = req.body.noun2 ? String(req.body.noun2) : '';
+    const noun3: string = req.body.noun3 ? String(req.body.noun3) : '';
+    const noun4: string = req.body.noun4 ? String(req.body.noun4) : '';
+    const creature: string = req.body.creature ? String(req.body.creature) : '';
+    const adjective1: string = req.body.adjective1 ? String(req.body.adjective1) : '';
+    const adjective2: string = req.body.adjective2 ? String(req.body.adjective2) : '';
+    const adjective3: string = req.body.adjective3 ? String(req.body.adjective3) : '';
+    const place: string = req.body.place ? String(req.body.place) : '';
+    const transport: string = req.body.transport ? String(req.body.transport) : '';
+    const verb: string = req.body.verb ? String(req.body.verb) : '';
+    const sentence: string = req.body.sentence ? String(req.body.sentence) : '';
+
+    interface MadlibResults {
+        character1: string;
+        character2: string;
+        noun1: string;
+        noun2: string;
+        noun3: string;
+        noun4: string;
+        creature: string;
+        adjective1: string;
+        adjective2: string;
+        adjective3: string;
+        place: string;
+        transport: string;
+        verb: string;
+        sentence: string;
+    }
+
+    const newMadlibResults: MadlibResults = {
+        character1: character1,
+        character2: character2,
+        noun1: noun1,
+        noun2: noun2,
+        noun3: noun3,
+        noun4: noun4,
+        creature: creature,
+        adjective1: adjective1,
+        adjective2: adjective2,
+        adjective3: adjective3,
+        place: place,
+        transport: transport,
+        verb: verb,
+        sentence: sentence
+    }
+
+    res.render('madlib-results', {madlib: newMadlibResults});
+})
+
+
 
 export default routes;
 

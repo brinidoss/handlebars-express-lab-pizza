@@ -1,7 +1,23 @@
+<head>
+<link rel="stylesheet" href="/review-confirmation.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tourney&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Tourney&display=swap" rel="stylesheet">
+</head>
+
+<body>
 <h3>Thanks for the review!</h3>
-
-<p>Your Name: {{review.name}}</p>
-<p>Comment: {{review.comment}}</p>
-<p>Rating: {{review.rating}}</p>
-
-<a href="/">Back to Homepage</a>
+<div class="content">
+    <div class="confirmation-container">
+        <p><b>Your Name:</b>  {{review.name}}</p>
+        <p><b>Comment:</b>  {{review.comment}}</p>
+        <p><b>Rating:</b>  {{review.rating}}</p>
+        <div class="link-container">        
+            <a href="/">Back to Homepage</a>
+        </div>
+    </div>
+</div>
+</body>
