@@ -1,0 +1,55 @@
+h2 {
+    font-family: Tourney;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 100px;
+}
+
+body {
+    font-family: Orbitron;
+    background-color: black;
+    color: black;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/nebula2.jpg);
+    background-size: contain;
+    border: solid white 2px;
+    box-shadow: 0 8px 10px 0 rgba(248, 246, 246, 0.358), 0 10px 25px 0 rgba(243, 243, 243, 0.19);
+    height: 300px;
+    width: 500px;
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+.specialty-info {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px 50px;
+    width: 250px;
+    height: 185px;
+    justify-content: space-around;
+}
+
+a {
+    color: gray;
+}
+
+.img-container {
+    position: fixed;
+    bottom: 50px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+#planet {
+    width: 300px;
+    height: 300px;
+}

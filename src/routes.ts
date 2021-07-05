@@ -78,26 +78,39 @@ routes.post('/build-your-own/confirmation', (req, res) => {
         let total: number = 0;
 
         if (String(req.body.size) === "Small") {
-            total += 7;
+            total += 700;
             if (chosenToppings) {
-                total += chosenToppings.length * .5;
+                total += chosenToppings.length * 50;
             }
         } else if (String(req.body.size) === "Medium") {
-            total += 10;
+            total += 1000;
             if (chosenToppings) {
-                total += chosenToppings.length;
+                total += chosenToppings.length * 100;
             }
         } else {
-            total += 12;
+            total += 1200;
             if (chosenToppings) {
-                total += chosenToppings.length * 1.25;
+                total += chosenToppings.length * 125;
             }
         }
 
         if (glutenFree === 'Yes') {
-            total += 2;
+            total += 200;
         }
-        return total;
+
+        if (chosenToppings.includes("Truffle (Extra $1.00)")) {
+            total += 100;
+        }
+        if (chosenToppings.includes("Steak (Extra $1.00)")) {
+            total += 100;
+        }
+        if (chosenToppings.includes("Artichoke (Extra $0.50)")) {
+            total += 50;
+        }
+        if (chosenToppings.includes("Gold Leaf (Extra $5.00)")) {
+            total += 500;
+        }
+        return total/100;
     }
    
     function getFreeDelivery(): string {
@@ -113,7 +126,7 @@ routes.post('/build-your-own/confirmation', (req, res) => {
         toppings: string[];
         glutenFree: string;
         specialInstructions: string;
-        price: number;
+        price: string;
         freeDelivery: string;
     }
 
@@ -122,14 +135,12 @@ routes.post('/build-your-own/confirmation', (req, res) => {
         toppings: chosenToppings,
         glutenFree: glutenFree,
         specialInstructions: specialInstructions,
-        price: calcTotal(),
+        price: calcTotal().toFixed(2),
         freeDelivery: getFreeDelivery()
     }
 
     res.render('build-submission', {pizza: newBuiltPizza});
 })
-
-console.log(123/100);
 
 export default routes;
 

@@ -1,6 +1,23 @@
-<link rel="stylesheet" href="/styles.css">
-<h1>You Are Clear to Enter.  Welcome to Pizza Planet!</h1>
+<head>
+<link rel="stylesheet" href="/homepage.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tourney&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Tourney&display=swap" rel="stylesheet">
+</head>
 
+<body>
+<header>
+<h1>You Are Clear to Enter.  Welcome to Pizza Planet!</h1>
+</header>
+
+<div class="content">
+   
+<main>
+     <section>
+<div class="specialty-container">
 <h3>Specialty Pizzas</h3>
 <nav>
     <ul>
@@ -11,11 +28,27 @@
         {{/each}}
     </ul>
 </nav>
+</div>
+<div class="custom-container">
+    <h3>Custom Pizza</h3>
+    <a href="/build-your-own">Build your own!</a>
+</div>
 
-<h3>Custom Pizza</h3>
-<a href="/build-your-own">Build your own!</a>
+<div class="review-container">
+    <h3>Leave a Review</h3>
+    <a href="/review">Click here to leave a review.</a>
+</div>
+</section>
+</main>
 
-<h3>Leave a Review</h3>
-<a href="/review">Click here to leave a review.</a>
-
-<img src="/pizza-image.jpg">
+<div class="planet-container">
+<img id="blue-planet" src="/blue-planet.jpg" alt="planet">
+<img id="green-planet" src="/green-planet.jpg" alt="planet">
+<!-- <img id="pink-planet" src="/pink-planet.jpg" alt="planet"> -->
+<img id="red-planet" src="/red-planet.jpg" alt="planet">
+</div>
+</div>
+<div class="pizza-planet-container">
+    <img id="pizza-planet" src="/pizza-planet.jpg" alt="pizza">
+</div>
+</body>

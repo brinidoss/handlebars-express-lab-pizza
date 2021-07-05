@@ -1,4 +1,7 @@
-const toppings: string[] = ['Pepperoni', 'Sausage', 'Ham', 'BBQ Chicken', 'Mushroom', 'Green Pepper', 'Onion', 'Olive', 'Artichoke', 'Truffle', 'Pineapple'];
+const toppings: string[] = ['Pepperoni', 'Sausage', 'Ham', 'BBQ Chicken', 
+    'Steak (Extra $1.00)', 'Mushroom', 'Green Pepper', 'Onion', 'Olive', 
+    'Artichoke (Extra $0.50)', 'Truffle (Extra $1.00)', 'Pineapple', 
+    'Gold Leaf (Extra $5.00)'];
 
 // export interface Topping {
 //     name: string;
